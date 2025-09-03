@@ -24,7 +24,7 @@ Path(documents + "/downloaded_docs").mkdir(exist_ok=True)
 Path(videos + "/downloaded_videos").mkdir(exist_ok=True)
 Path(pictures + "/downloaded_pictures").mkdir(exist_ok=True)
 Path(music + "/downloaded_music").mkdir(exist_ok=True)
-Path(documents + "downloaded_archives").mkdir(exist_ok=True)
+Path(documents + "/downloaded_archives").mkdir(exist_ok=True)
 
 #move files
 os.chdir(downloads)
@@ -39,4 +39,5 @@ for file in os.listdir():
     if ext in pic:
         shutil.move(file, pictures + "/downloaded_pictures")
     if ext in mus:
+
         shutil.move(file, music + "/downloaded_music")
